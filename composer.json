@@ -1,0 +1,23 @@
+{
+  "name": "drupal/steepbase",
+  "description": "Development environment for Single-Directory Components (SDCs).",
+  "type": "drupal-module",
+  "license": "GPL-2.0-or-later",
+  "homepage": "https://drupal.org/project/steepbase",
+  "support": {
+      "issues": "https://drupal.org/project/steepbase",
+      "source": "https://git.drupalcode.org/project/steepbase"
+  },
+  "repositories": [
+      {
+          "type": "composer",
+          "url": "https://packages.drupal.org/8"
+      }
+  ],
+  "require": {
+      "drupal/core": "^10.4 || ^11.1"
+  },
+  "require-dev": {
+      "drupal/coder": "^8.3"
+  }
+}

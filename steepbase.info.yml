@@ -1,0 +1,5 @@
+name: Steepbase
+description: Development environment for Single-Directory Components (SDCs).
+type: module
+core_version_requirement: ^10.4 || ^11.1
+php: 8.3

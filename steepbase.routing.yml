@@ -1,0 +1,6 @@
+steepbase.main:
+  path: '/steepbase'
+  defaults:
+    _controller: '\Drupal\steepbase\Controller\SteepbaseController'
+  requirements:
+    _permission: 'access content' 
