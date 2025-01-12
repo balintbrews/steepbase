@@ -5,3 +5,51 @@ include:
       - '/includes/include.drupalci.main.yml'
       - '/includes/include.drupalci.variables.yml'
       - '/includes/include.drupalci.workflows.yml'
+
+variables:
+   SKIP_ESLINT: 1
+   SKIP_NIGHTWATCH: 1
+   SKIP_STYLELINT: 1
+   SKIP_PAGES: 1
+
+ui-install:
+  stage: build
+  image: node:22-alpine
+  script:
+    - npm ci --prefix=ui
+  artifacts:
+    paths:
+      - ui/node_modules
+
+ui-tsc:
+  stage: validate
+  needs:
+    - ui-install
+  image: node:22-alpine
+  script:
+    - npm run code:check:tsc --prefix=ui
+
+ui-build:
+  stage: validate
+  needs:
+    - ui-install
+    - ui-tsc
+  image: node:22-alpine
+  script:
+    - npm run build --prefix=ui
+
+ui-eslint:
+  stage: validate
+  needs:
+    - ui-install
+  image: node:22-alpine
+  script:
+    - npm run code:check:eslint --prefix=ui
+
+ui-prettier:
+  stage: validate
+  needs:
+    - ui-install
+  image: node:22-alpine
+  script:
+    - npm run code:check:prettier --prefix=ui

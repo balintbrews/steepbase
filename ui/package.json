@@ -29,12 +29,12 @@
     "preview": "vite preview",
     "code:check": "run-s -c -n code:check:**",
     "code:check:tsc": "tsc --noEmit",
-    "code:check:prettier": "npm run s:prettier -- --check",
     "code:check:eslint": "npm run s:eslint",
+    "code:check:prettier": "npm run s:prettier -- --check",
     "code:fix": "run-s -c -n code:fix:**",
-    "code:fix:prettier": "npm run s:prettier -- --write",
     "code:fix:eslint": "npm run s:eslint -- --fix",
-    "s:prettier": "prettier \"**/*.{js,jsx,ts,tsx,json,html,md,mdx,yml}\"",
-    "s:eslint": "eslint \"**/*.{js,jsx,ts,tsx}\""
+    "code:fix:prettier": "npm run s:prettier -- --write",
+    "s:eslint": "eslint \"**/*.{js,jsx,ts,tsx}\"",
+    "s:prettier": "prettier \"**/*.{js,jsx,ts,tsx,json,html,md,mdx,yml}\""
   }
 }
