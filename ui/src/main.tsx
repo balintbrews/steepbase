@@ -1,6 +1,7 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './app.tsx'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+
+import App from './app.tsx';
 
 const container = document.getElementById('steepbase');
 if (!container) {
@@ -11,4 +12,4 @@ createRoot(container).render(
   <StrictMode>
     <App />
   </StrictMode>,
-)
+);

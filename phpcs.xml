@@ -2,6 +2,7 @@
 <ruleset name="steepbase">
   <description>PHP CodeSniffer configuration for the Steepbase module.</description>
   <file>.</file>
+  <exclude-pattern>ui/*</exclude-pattern>
   <arg name="extensions" value="php,module,inc,install,test,profile,theme,css,info,txt,md,yml"/>
   <rule ref="Drupal"></rule>
   <rule ref="DrupalPractice"></rule>
