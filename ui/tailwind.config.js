@@ -4,6 +4,12 @@ module.exports = {
   content: ['./src/**/*.tsx'],
   theme: {
     extend: {
+      fontFamily: {
+        sans: [
+          '"Inter Variable", sans-serif',
+          { fontFeatureSettings: '"liga" 1, "calt" 1' },
+        ],
+      },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
