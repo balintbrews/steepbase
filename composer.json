@@ -16,5 +16,8 @@
   ],
   "require": {
       "drupal/core": "^10.4 || ^11.1"
+  },
+  "require-dev": {
+    "drush/drush": "^13.3"
   }
 }

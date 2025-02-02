@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ## Description: Run `phpcbf`: PHP Code Beautifier and Fixer
+## Aliases: phpcs-fix
 ## Usage: phpcbf [flags] [args]
 ## Example: `ddev phpcbf` or `ddev phpcbf -n`
 ## ExecRaw: true
