@@ -1,0 +1,13 @@
+parameters:
+  level: 9
+  fileExtensions:
+    - php
+    - module
+    - inc
+    - install
+    - theme
+    - profile
+  excludePaths:
+    - ui
+    - vendor
+    - web
