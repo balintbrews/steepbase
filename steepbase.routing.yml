@@ -1,6 +1,15 @@
 steepbase.main:
   path: '/steepbase'
   defaults:
-    _controller: '\Drupal\steepbase\Controller\SteepbaseController'
+    _controller: 'Drupal\steepbase\Controller\SteepbaseController'
   requirements:
     _permission: 'access content' 
+
+steepbase.components:
+  path: '/steepbase/api/components'
+  defaults:
+    _controller: 'Drupal\steepbase\Controller\ComponentController::getDefinitions'
+  requirements:
+    _permission: 'access content'
+  options:
+    _format: json 
